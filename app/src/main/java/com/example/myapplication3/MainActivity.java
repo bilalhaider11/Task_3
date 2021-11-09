@@ -1,4 +1,4 @@
-package com.example.myapplication3.;
+package com.example.myapplication3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void nextActivity(View view){
-        Intent next = new Intent(this, Homepage.class);
+        Intent next = new Intent(this, activity_homepage.class);
         startActivity(next);
     }
 }
