@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
-        />
+        app:srcCompat="@drawable/emission" />
 
     <Button
         android:id="@+id/startQuiz"
@@ -33,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text="Begin Quiz"
+        android:onClick="startQuiz"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.873"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text="Learn"
+        android:onClick="learn"
         app:layout_constraintEnd_toStartOf="@+id/startQuiz"
         app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"

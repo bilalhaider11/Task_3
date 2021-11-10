@@ -41,6 +41,7 @@ public class activity_Quiz extends AppCompatActivity {
         generateQuestion();
     }
 
+
     void generateQuestion(){
         stat.setText(quiz.questions[currentQuestion].statement);
         o1.setText(quiz.questions[currentQuestion].options[0]);
@@ -71,6 +72,23 @@ public class activity_Quiz extends AppCompatActivity {
         }
 
         quiz.check(currentQuestion - 1);
+    }
+
+    public void nextQuestion(View view){
+        if(currentQuestion <10){
+            checkQuestion();
+            generateQuestion();
+            if(currentQuestion == 10) {
+                Button btn = findViewById(R.id.nextBtn);
+                btn.setText("Finish");
+            }
+        }
+        else{
+            checkQuestion();
+            Intent next = new Intent(this, activity_results.class);
+            next.putExtra("quiz", quiz);
+            startActivity(next);
+        }
     }
 
 
